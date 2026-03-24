@@ -53,7 +53,15 @@
             <label class="input-name"  for="psw"><b>Пароль</b></label>
             <input class="form-input" th:field="*{password}" type="text" placeholder="Введіть пароль" name="psw"
                    id="psw" required
-                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="3 букви">
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                   title="
+                   Пароль повинен відповідати наступним вимогам:
+
+містити щонайменше 8 символів;
+містити принаймні одну цифру (0–9);
+містити принаймні одну малу літеру (a–z);
+містити принаймні одну велику літеру (A–Z).
+                   ">
 
             <label class="input-name"  for="psw-repeat"><b>Пітвердження паролю</b></label>
             <p class="pas-err" id="pswErr"></p>
